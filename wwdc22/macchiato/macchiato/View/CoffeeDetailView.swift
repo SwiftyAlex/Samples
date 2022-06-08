@@ -27,8 +27,6 @@ struct CoffeeDetailView: View {
                     .font(.headline.weight(.semibold))
                 Text("There should be some more information about the coffee here.")
                     .font(.subheadline.weight(.regular))
-                SiriTipView(intent: ViewCoffeeIntent(coffee: coffee))
-                    .siriTipViewStyle(.black)
             }
             .padding(.horizontal)
             Spacer()

@@ -22,6 +22,13 @@ struct ContentView: View {
         .onChange(of: navigationManager.requestedCoffee) { newValue in
             if let coffee = newValue {
                 navigationStack = [coffee]
+                navigationManager.requestedCoffee = nil
+            }
+        }
+        .onChange(of: navigationManager.requestedMenu) { newValue in
+            if navigationManager.requestedMenu {
+                navigationStack = []
+                navigationManager.requestedMenu = false
             }
         }
         .onAppear {
