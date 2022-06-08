@@ -10,6 +10,8 @@ import AppIntents
 
 struct CoffeeShortcuts: AppShortcutsProvider {
     static var appShortcuts: [AppShortcut] {
+        AppShortcut(intent: OpenMenuIntent(), phrases: ["Show me the menu"])
+
         AppShortcut(
             intent: ViewCoffeeIntent(),
             phrases: ["Show me my favourite coffee"]

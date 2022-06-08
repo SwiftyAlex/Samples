@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA9E902D28501ABF009AC059 /* OpenMenuIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E902C28501ABF009AC059 /* OpenMenuIntent.swift */; };
 		FAA15B81284FFDA7005CA9A6 /* macchiatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15B80284FFDA7005CA9A6 /* macchiatoApp.swift */; };
 		FAA15B83284FFDA7005CA9A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15B82284FFDA7005CA9A6 /* ContentView.swift */; };
 		FAA15B85284FFDA9005CA9A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA15B84284FFDA9005CA9A6 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA9E902C28501ABF009AC059 /* OpenMenuIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMenuIntent.swift; sourceTree = "<group>"; };
 		FAA15B7D284FFDA7005CA9A6 /* macchiato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macchiato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA15B80284FFDA7005CA9A6 /* macchiatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macchiatoApp.swift; sourceTree = "<group>"; };
 		FAA15B82284FFDA7005CA9A6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				FAA15B8E284FFEA4005CA9A6 /* ViewCoffeeIntent.swift */,
 				FAA15BA128500BCC005CA9A6 /* CoffeeShortcuts.swift */,
+				FA9E902C28501ABF009AC059 /* OpenMenuIntent.swift */,
 			);
 			path = Intents;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				FAA15B81284FFDA7005CA9A6 /* macchiatoApp.swift in Sources */,
 				FAA15B8F284FFEA4005CA9A6 /* ViewCoffeeIntent.swift in Sources */,
 				FAA15BA228500BCC005CA9A6 /* CoffeeShortcuts.swift in Sources */,
+				FA9E902D28501ABF009AC059 /* OpenMenuIntent.swift in Sources */,
 				FAA15B92284FFFA5005CA9A6 /* Coffee.swift in Sources */,
 				FAA15B95285000D8005CA9A6 /* CoffeeView.swift in Sources */,
 				FAA15B9C28500391005CA9A6 /* CoffeeDetailView.swift in Sources */,
