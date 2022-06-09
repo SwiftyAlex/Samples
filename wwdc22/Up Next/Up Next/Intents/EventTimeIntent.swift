@@ -14,7 +14,7 @@ struct EventTimeIntent: AppIntent {
     static var description = IntentDescription("Find out how long is left in your event")
     static var openAppWhenRun: Bool = false
 
-    @Parameter(title: "Event")
+    @Parameter(title: "Event", optionsProvider: EventOptionsProvider())
     var event: Event
 
     @MainActor

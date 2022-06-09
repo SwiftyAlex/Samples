@@ -7,12 +7,12 @@
 
 import Intents
 
-class IntentHandler: INExtension, WidgetEventIntentHandling {
+class IntentHandler: INExtension, WidgetIntentHandling {
     override func handler(for intent: INIntent) -> Any {
         return self
     }
 
-    func provideEventOptionsCollection(for intent: WidgetEventIntent) async throws -> INObjectCollection<SiriEvent> {
+    func provideParameterOptionsCollection(for intent: WidgetIntent) async throws -> INObjectCollection<SiriEvent> {
         let appEvents = Storage.shared.events
         let siriEvents = appEvents.map { event in
             SiriEvent(identifier: event.id.uuidString, display: event.name)

@@ -17,7 +17,7 @@
 	</array>
 	<key>NSUserActivityTypes</key>
 	<array>
-		<string>WidgetEventIntent</string>
+		<string>WidgetIntent</string>
 	</array>
 </dict>
 </plist>

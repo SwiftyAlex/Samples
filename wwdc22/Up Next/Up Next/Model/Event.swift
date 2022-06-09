@@ -9,7 +9,7 @@ import Foundation
 import AppIntents
 import SwiftUI
 
-struct Event: Codable, Hashable {
+struct Event: Codable, Hashable, AppEntity {
     let id: UUID
     let imageData: Data
     let name: String
@@ -24,7 +24,7 @@ struct Event: Codable, Hashable {
 }
 
 // MARK: - App Intents
-extension Event: AppEntity {
+extension Event {
     typealias DefaultQueryType = EventsQuery
 
     static var defaultQuery: EventsQuery = EventsQuery()

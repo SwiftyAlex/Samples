@@ -14,14 +14,14 @@ struct EventTimelineProvider: IntentTimelineProvider {
         EventEntry(date: Date(), event: .newYork)
     }
 
-    func getSnapshot(for configuration: WidgetEventIntent, in context: Context, completion: @escaping (EventEntry) -> ()) {
+    func getSnapshot(for configuration: WidgetIntent, in context: Context, completion: @escaping (EventEntry) -> ()) {
         let entry = EventEntry(date: Date(), event: .newYork)
         completion(entry)
     }
 
-    func getTimeline(for configuration: WidgetEventIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(for configuration: WidgetIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         guard
-            let event = Storage.compressedEvent(for: configuration.event) else {
+            let event = Storage.compressedEvent(for: configuration.parameter) else {
             completion(Timeline(entries: [EventEntry(date: Date(), event: nil)], policy: .atEnd))
             return
         }
@@ -211,7 +211,7 @@ struct EventWidget: Widget {
     let kind: String = "widgets"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: WidgetEventIntent.self, provider: EventTimelineProvider()) { entry in
+        IntentConfiguration(kind: kind, intent: WidgetIntent.self, provider: EventTimelineProvider()) { entry in
             EventWidgetView(entry: entry)
                 .widgetURL(URL(string: "up-next://home?eventId=\(entry.event?.id.uuidString ?? "")"))
         }
