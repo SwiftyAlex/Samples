@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA51253A28514090001FF824 /* AlwaysFittingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51253928514090001FF824 /* AlwaysFittingView.swift */; };
 		FA9E902D28501ABF009AC059 /* OpenMenuIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E902C28501ABF009AC059 /* OpenMenuIntent.swift */; };
 		FAA15B81284FFDA7005CA9A6 /* macchiatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15B80284FFDA7005CA9A6 /* macchiatoApp.swift */; };
 		FAA15B83284FFDA7005CA9A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA15B82284FFDA7005CA9A6 /* ContentView.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA51253928514090001FF824 /* AlwaysFittingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlwaysFittingView.swift; sourceTree = "<group>"; };
 		FA9E902C28501ABF009AC059 /* OpenMenuIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMenuIntent.swift; sourceTree = "<group>"; };
 		FAA15B7D284FFDA7005CA9A6 /* macchiato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = macchiato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA15B80284FFDA7005CA9A6 /* macchiatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macchiatoApp.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 				FAA15B82284FFDA7005CA9A6 /* ContentView.swift */,
 				FAA15B84284FFDA9005CA9A6 /* Assets.xcassets */,
 				FAA15B86284FFDA9005CA9A6 /* Preview Content */,
+				FA51253928514090001FF824 /* AlwaysFittingView.swift */,
 			);
 			path = macchiato;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				FAA15B9A2850032E005CA9A6 /* MenuView.swift in Sources */,
 				FAA15B83284FFDA7005CA9A6 /* ContentView.swift in Sources */,
 				FAA15BA028500954005CA9A6 /* NavigationManager.swift in Sources */,
+				FA51253A28514090001FF824 /* AlwaysFittingView.swift in Sources */,
 				FAA15B972850023C005CA9A6 /* CoffeeGrid.swift in Sources */,
 				FAA15B81284FFDA7005CA9A6 /* macchiatoApp.swift in Sources */,
 				FAA15B8F284FFEA4005CA9A6 /* ViewCoffeeIntent.swift in Sources */,
