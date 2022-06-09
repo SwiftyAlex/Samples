@@ -86,6 +86,7 @@ struct EventWidgetEntryView : View {
         if let uiImage = UIImage(data: imageData) {
             Rectangle()
                 .foregroundColor(.clear)
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 .background(
                     Image(uiImage: uiImage)
                         .resizable()

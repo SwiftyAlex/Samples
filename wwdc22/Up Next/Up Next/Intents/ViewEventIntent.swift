@@ -7,7 +7,6 @@
 
 import Foundation
 import AppIntents
-import WidgetKit
 
 struct ViewEventIntent: AppIntent {
     static var title: LocalizedStringResource = "Show my event"
