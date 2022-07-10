@@ -16,5 +16,7 @@ struct CoffeeShortcuts: AppShortcutsProvider {
             intent: ViewCoffeeIntent(),
             phrases: ["Show me my favourite coffee"]
         )
+
+        AppShortcut(intent: WhichCoffeeIntent(), phrases: ["What coffee do you have?"])
     }
 }

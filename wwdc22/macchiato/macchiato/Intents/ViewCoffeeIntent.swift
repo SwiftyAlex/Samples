@@ -12,7 +12,7 @@ struct ViewCoffeeIntent: AppIntent {
     static var title: LocalizedStringResource = "View a coffee"
     static var description = IntentDescription("Jumps you right into the app, and into your favourite coffee.")
     static var openAppWhenRun: Bool = true
-
+    
     @Parameter(title: "Coffee", optionsProvider: CoffeeOptionsProvider())
     var coffee: Coffee
 
