@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA31F574287C7053000B7A65 /* CoffeePropertyQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31F573287C7053000B7A65 /* CoffeePropertyQuery.swift */; };
 		FA51253A28514090001FF824 /* AlwaysFittingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA51253928514090001FF824 /* AlwaysFittingView.swift */; };
 		FA870FB8287AFC88006EAACE /* CoffeeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA870FB7287AFC88006EAACE /* CoffeeProvider.swift */; };
 		FA870FBA287AFCD4006EAACE /* WhichCoffeeIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA870FB9287AFCD4006EAACE /* WhichCoffeeIntent.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA31F573287C7053000B7A65 /* CoffeePropertyQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeePropertyQuery.swift; sourceTree = "<group>"; };
 		FA51253928514090001FF824 /* AlwaysFittingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlwaysFittingView.swift; sourceTree = "<group>"; };
 		FA870FB7287AFC88006EAACE /* CoffeeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeProvider.swift; sourceTree = "<group>"; };
 		FA870FB9287AFCD4006EAACE /* WhichCoffeeIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhichCoffeeIntent.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				FAA15BA128500BCC005CA9A6 /* CoffeeShortcuts.swift */,
 				FA9E902C28501ABF009AC059 /* OpenMenuIntent.swift */,
 				FA870FB9287AFCD4006EAACE /* WhichCoffeeIntent.swift */,
+				FA31F573287C7053000B7A65 /* CoffeePropertyQuery.swift */,
 			);
 			path = Intents;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				FAA15BA228500BCC005CA9A6 /* CoffeeShortcuts.swift in Sources */,
 				FA9E902D28501ABF009AC059 /* OpenMenuIntent.swift in Sources */,
 				FAA15B92284FFFA5005CA9A6 /* Coffee.swift in Sources */,
+				FA31F574287C7053000B7A65 /* CoffeePropertyQuery.swift in Sources */,
 				FAA15B95285000D8005CA9A6 /* CoffeeView.swift in Sources */,
 				FAA15B9C28500391005CA9A6 /* CoffeeDetailView.swift in Sources */,
 				FA870FBA287AFCD4006EAACE /* WhichCoffeeIntent.swift in Sources */,

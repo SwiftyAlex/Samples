@@ -20,3 +20,4 @@ struct CoffeeShortcuts: AppShortcutsProvider {
         AppShortcut(intent: WhichCoffeeIntent(), phrases: ["What coffee do you have?"])
     }
 }
+

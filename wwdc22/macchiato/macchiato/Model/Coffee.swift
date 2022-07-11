@@ -8,29 +8,46 @@
 import Foundation
 import AppIntents
 
-struct CoffeeQuery: EntityStringQuery {
-    typealias Entity = Coffee
-    func entities(matching string: String) async throws -> [Coffee] {
-        return Coffee.all.filter({ $0.name.starts(with: string) })
-    }
+// This will break the other query in beta 2
+//struct CoffeeQuery: EntityStringQuery {
+//    typealias Entity = Coffee
+//    func entities(matching string: String) async throws -> [Coffee] {
+//        return Coffee.all.filter({ $0.name.starts(with: string) })
+//    }
+//    func entities(for identifiers: [UUID]) async throws -> [Coffee] {
+//        return Coffee.all.filter({ identifiers.contains($0.id) })
+//    }
+//}
 
-    func entities(for identifiers: [UUID]) async throws -> [Coffee] {
-        return Coffee.all.filter({ identifiers.contains($0.id) })
-    }
-}
-
-struct Coffee: Equatable, Hashable, AppEntity {
-    typealias DefaultQueryType = CoffeeQuery
-    static var defaultQuery: CoffeeQuery = CoffeeQuery()
-
-    static var typeDisplayName: LocalizedStringResource = LocalizedStringResource("Coffee", defaultValue: "Coffee")
-    var displayRepresentation: DisplayRepresentation {
+public struct Coffee: Equatable, Hashable, AppEntity {
+    public typealias DefaultQueryType = CoffeePropertyQuery
+    public static var defaultQuery: CoffeePropertyQuery = CoffeePropertyQuery()
+    
+    public static var typeDisplayName: LocalizedStringResource = LocalizedStringResource("Coffee", defaultValue: "Coffee")
+    public  var displayRepresentation: DisplayRepresentation {
         DisplayRepresentation(title: .init(stringLiteral: name))
     }
 
-    let id: UUID
-    let name: String
-    let imageUrl: URL
+    public let id: UUID
+    @Property(title: "Coffee Name")
+    public var name: String
+    public let imageUrl: URL
+
+    public init(id: UUID, name: String, imageUrl: URL) {
+        self.id = id
+        self.imageUrl = imageUrl
+        self.name = name
+    }
+
+    public static func == (lhs: Coffee, rhs: Coffee) -> Bool {
+        lhs.id == rhs.id && lhs.imageUrl == rhs.imageUrl && lhs.name == rhs.name
+    }
+
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(name)
+        hasher.combine(imageUrl)
+    }
 }
 
 // MARK: - Useful data
