@@ -18,8 +18,10 @@ struct EventTimeIntent: AppIntent {
     var event: Event
 
     @MainActor
-    func perform() async throws -> some IntentPerformResult {
-        return .finished(view: EventViewText(event: event))
+    func perform() async throws -> some ShowsSnippetView {
+        return .result(value: event) {
+            EventView(event: event, rounded: false)
+        }
     }
 }
 

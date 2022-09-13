@@ -17,9 +17,9 @@ struct ViewEventIntent: AppIntent {
     var event: Event
 
     @MainActor
-    func perform() async throws -> some IntentPerformResult {
+    func perform() async throws -> some IntentResult {
         NavigationManager.shared.open(event: event)
-        return .finished(value: true)
+        return .result()
     }
 }
 

@@ -26,8 +26,10 @@ struct Event: Codable, Hashable, AppEntity {
 // MARK: - App Intents
 extension Event {
     typealias DefaultQueryType = EventsQuery
-
     static var defaultQuery: EventsQuery = EventsQuery()
+    
+    public static var typeDisplayName: LocalizedStringResource = LocalizedStringResource("Event", defaultValue: "Event")
+    public static var typeDisplayRepresentation: TypeDisplayRepresentation = .init(name: "Event")
 
     var displayRepresentation: DisplayRepresentation {
         DisplayRepresentation(
@@ -35,10 +37,6 @@ extension Event {
             subtitle: .init(stringLiteral: RelativeDateTimeFormatter().localizedString(for: date, relativeTo: Date())),
             image: DisplayRepresentation.Image(data: imageData)
         )
-    }
-
-    static var typeDisplayName: LocalizedStringResource {
-        return "Event"
     }
 }
 

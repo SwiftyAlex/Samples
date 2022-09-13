@@ -9,6 +9,14 @@ import SwiftUI
 
 struct EventView: View {
     let event: Event
+    var rounded: Bool = true
+    
+    var radius: CGFloat {
+        rounded ? 12 : 0
+    }
+    var shadowRadius: CGFloat {
+        rounded ? 8 : 0
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -22,11 +30,11 @@ struct EventView: View {
             text
         }
         .aspectRatio(0.88, contentMode: .fit)
-        .clipShape(RoundedRectangle(cornerRadius: 12))
+        .clipShape(RoundedRectangle(cornerRadius: radius))
         .background(
-            RoundedRectangle(cornerRadius: 12)
+            RoundedRectangle(cornerRadius: radius)
                 .foregroundStyle(.white)
-                .shadow(color: .gray.opacity(0.5), radius: 8)
+                .shadow(color: .gray.opacity(0.5), radius: shadowRadius)
         )
     }
 

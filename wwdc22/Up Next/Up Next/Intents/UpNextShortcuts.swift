@@ -12,11 +12,15 @@ struct UpNextShortcuts: AppShortcutsProvider {
     static var appShortcuts: [AppShortcut] {
         AppShortcut(
             intent: EventTimeIntent(),
-            phrases: ["How long until my event?"]
+            phrases: [
+                "\(.applicationName) how long until \(\.$event)"
+            ]
         )
         AppShortcut(
             intent: ViewEventIntent(),
-            phrases: ["Show me my event"]
+            phrases: [
+                "\(.applicationName) show me my \(\.$event)"
+            ]
         )
     }
 }
