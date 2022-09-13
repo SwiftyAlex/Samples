@@ -24,6 +24,7 @@ public struct Coffee: Equatable, Hashable, AppEntity {
     public static var defaultQuery: CoffeePropertyQuery = CoffeePropertyQuery()
     
     public static var typeDisplayName: LocalizedStringResource = LocalizedStringResource("Coffee", defaultValue: "Coffee")
+    public static var typeDisplayRepresentation: TypeDisplayRepresentation = .init(name: "Coffee")
     public  var displayRepresentation: DisplayRepresentation {
         DisplayRepresentation(title: .init(stringLiteral: name))
     }

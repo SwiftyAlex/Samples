@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+import AppIntents
 
 struct MenuView: View {
     var body: some View {
         ScrollView {
             CoffeeGrid()
+            SiriTipView(
+                intent: OpenMenuIntent()
+            )
+            .padding()
+            .siriTipViewStyle(.dark)
         }
         .navigationTitle("Menu")
     }

@@ -11,7 +11,7 @@ import AppIntents
 @main
 struct macchiatoApp: App {
     init() {
-        IntentDependencyManager.shared.add(key: "CoffeeProvider", dependency: CoffeeProvider())
+        AppDependencyManager.shared.add(key: "CoffeeProvider", dependency: CoffeeProvider())
     }
 
     var body: some Scene {

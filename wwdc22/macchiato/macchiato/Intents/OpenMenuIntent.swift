@@ -9,12 +9,12 @@ import Foundation
 import AppIntents
 
 struct OpenMenuIntent: AppIntent {
-    static var title: LocalizedStringResource = "Open the menu"
+    static var title: LocalizedStringResource = "Open the latest menu"
     static var description = IntentDescription("Hop right into an order.")
     static var openAppWhenRun: Bool = true
 
-    func perform() async throws -> some IntentPerformResult {
+    func perform() async throws -> some IntentResult {
         NavigationManager.shared.openMenu()
-        return .finished
+        return .result()
     }
 }

@@ -8,16 +8,17 @@
 import Foundation
 import AppIntents
 
-struct CoffeeShortcuts: AppShortcutsProvider {
-    static var appShortcuts: [AppShortcut] {
-        AppShortcut(intent: OpenMenuIntent(), phrases: ["Show me the menu"])
-
-        AppShortcut(
-            intent: ViewCoffeeIntent(),
-            phrases: ["Show me my favourite coffee"]
-        )
-
-        AppShortcut(intent: WhichCoffeeIntent(), phrases: ["What coffee do you have?"])
+public struct CoffeeShortcuts: AppShortcutsProvider {
+    public static var appShortcuts: [AppShortcut] {
+        AppShortcut(intent: ViewCoffeeIntent(), phrases: [
+            "\(.applicationName) open \(\.$coffee)"
+        ])
+        AppShortcut(intent: WhichCoffeeIntent(), phrases: [
+            "\(.applicationName) show be the bevs."
+        ])
+        AppShortcut(intent: OpenMenuIntent(), phrases: [
+            "\(.applicationName) show me the menu."
+        ])
     }
 }
 

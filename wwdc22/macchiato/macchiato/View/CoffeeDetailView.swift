@@ -27,6 +27,9 @@ struct CoffeeDetailView: View {
                     .font(.headline.weight(.semibold))
                 Text("There should be some more information about the coffee here.")
                     .font(.subheadline.weight(.regular))
+                SiriTipView(
+                    intent: ViewCoffeeIntent(coffee: coffee)
+                )
             }
             .padding(.horizontal)
             Spacer()
@@ -35,8 +38,7 @@ struct CoffeeDetailView: View {
             do {
                 let intent = ViewCoffeeIntent(coffee: coffee)
                 let manager = IntentDonationManager.shared
-                let result: ViewCoffeeIntent.IntentPerformResultType = .finished
-                _ = try await manager.donate(intent: intent, result: result)
+                _ = try await manager.donate(intent: intent)
             } catch let error {
                 print("Unable to donate ViewCoffeeIntent for \(coffee) due to \(error.localizedDescription)")
             }

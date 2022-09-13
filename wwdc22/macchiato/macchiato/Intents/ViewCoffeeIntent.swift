@@ -16,9 +16,10 @@ struct ViewCoffeeIntent: AppIntent {
     @Parameter(title: "Coffee", optionsProvider: CoffeeOptionsProvider())
     var coffee: Coffee
 
-    func perform() async throws -> some IntentPerformResult {
+    func perform() async throws -> some ProvidesDialog {
         NavigationManager.shared.open(coffee: coffee)
-        return .finished(dialog: .init("Fetching your brew."))
+        return .result(dialog: IntentDialog("Fetching your brew..."))
+
     }
 }
 
