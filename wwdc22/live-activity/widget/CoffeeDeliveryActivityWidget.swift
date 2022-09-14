@@ -29,7 +29,6 @@ struct CoffeeDeliveryActivityWidget: Widget {
                             .foregroundColor(.black)
                             .padding(12)
                     }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
                 })
                 DynamicIslandExpandedRegion(.leading, priority: .greatestFiniteMagnitude, content: {
                     Text(context.state.currentStatus.longText)
@@ -38,6 +37,25 @@ struct CoffeeDeliveryActivityWidget: Widget {
                         .multilineTextAlignment(.leading)
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
                 })
+                // Alternate solution
+//                DynamicIslandExpandedRegion(.center, priority: .greatestFiniteMagnitude) {
+//                    HStack(alignment: .center) {
+//                        Text(context.state.currentStatus.longText)
+//                            .font(.caption.weight(.semibold))
+//                            .lineLimit(nil)
+//                            .multilineTextAlignment(.leading)
+//                            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+//                        ZStack {
+//                            Circle()
+//                                .foregroundColor(.white)
+//                            Image(systemName: context.state.stateImageName)
+//                                .resizable()
+//                                .aspectRatio(contentMode: .fit)
+//                                .foregroundColor(.black)
+//                                .padding(12)
+//                        }
+//                    }
+//                }
             } compactLeading: {
                 makeView(for: "figure.run")
             } compactTrailing: {
