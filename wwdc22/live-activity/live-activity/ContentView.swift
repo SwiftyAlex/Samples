@@ -43,6 +43,16 @@ struct ContentView: View {
                     startActivityButton
                 }
             }
+            
+            if model.secondActivity != nil {
+                Section {
+                    stopSecondActivityButton
+                }
+            } else {
+                Section {
+                    startSecondActivityButton
+                }
+            }
 
             if !hasPermissions {
                 pushPermissionsButton
@@ -99,8 +109,36 @@ struct ContentView: View {
         })
         .listRowInsets(EdgeInsets())
     }
+    
+    var startSecondActivityButton: some View {
+        Button(action: {
+            model.start(coffeeName: "Flat White", isSecond: true)
+        }, label: {
+            Text("Start Second Activity")
+                .font(.subheadline.weight(.semibold))
+                .foregroundColor(.white)
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(RoundedRectangle(cornerRadius: 12))
+        })
+        .listRowInsets(EdgeInsets())
+    }
 
     var stopActivityButton: some View {
+        Button(action: {
+            model.stop()
+        }, label: {
+            Text("Stop Activity")
+                .font(.subheadline.weight(.semibold))
+                .foregroundColor(.white)
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .center)
+                .background(RoundedRectangle(cornerRadius: 12))
+        })
+        .listRowInsets(EdgeInsets())
+    }
+    
+    var stopSecondActivityButton: some View {
         Button(action: {
             model.stop()
         }, label: {

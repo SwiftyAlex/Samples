@@ -10,8 +10,9 @@ import ActivityKit
 
 class CoffeeModel: ObservableObject {
     @Published var liveActivity: Activity<CoffeeDeliveryAttributes>?
+    @Published var secondActivity: Activity<CoffeeDeliveryAttributes>?
 
-    func start(coffeeName: String) {
+    func start(coffeeName: String, isSecond: Bool = false) {
         guard ActivityAuthorizationInfo().areActivitiesEnabled else {
             print("Activities are not enabled.")
             return
@@ -21,11 +22,16 @@ class CoffeeModel: ObservableObject {
             let state = CoffeeDeliveryAttributes.ContentState(currentStatus: .recieved)
             do {
                 try await MainActor.run {
-                    liveActivity = try Activity<CoffeeDeliveryAttributes>.request(
+                    let activity = try Activity<CoffeeDeliveryAttributes>.request(
                         attributes: attributes,
                         contentState: state,
                         pushType: nil
                     )
+                    if isSecond {
+                        secondActivity = activity
+                    } else {
+                        liveActivity = activity
+                    }
                 }
                 print("Started activity")
             } catch (let error) {
@@ -50,4 +56,12 @@ class CoffeeModel: ObservableObject {
         }
     }
 
+    func stopSecond() {
+        Task {
+            await secondActivity?.end(using: nil, dismissalPolicy: .immediate)
+            await MainActor.run {
+                secondActivity = nil
+            }
+        }
+    }
 }
