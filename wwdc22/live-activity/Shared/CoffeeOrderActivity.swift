@@ -29,4 +29,15 @@ enum CoffeeDeliveryStatus: Codable, Sendable, CaseIterable {
             return "On its way!"
         }
     }
+    
+    var longText: String {
+        switch self {
+        case .recieved:
+            return "We've recieved your order."
+        case .preparing:
+            return "Our baristas are hard at work brewing up your cup!"
+        case .outForDelivery:
+            return "Get ready, your brew is speeding over to you right now."
+        }
+    }
 }

@@ -12,21 +12,60 @@ import ActivityKit
 
 struct CoffeeDeliveryActivityWidget: Widget {
     var body: some WidgetConfiguration {
-        ActivityConfiguration(attributesType: CoffeeDeliveryAttributes.self) { context in
+        return ActivityConfiguration(for: CoffeeDeliveryAttributes.self) { context in
             CoffeeDeliveryActivityWidgetView(
                 attributes: context.attributes,
                 state: context.state
             )
+        } dynamicIsland: { context in
+            DynamicIsland {
+                DynamicIslandExpandedRegion(.trailing, content: {
+                    ZStack {
+                        Circle()
+                            .foregroundColor(.white)
+                        Image(systemName: context.state.stateImageName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(.black)
+                            .padding(12)
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
+                })
+                DynamicIslandExpandedRegion(.leading, priority: .greatestFiniteMagnitude, content: {
+                    Text(context.state.currentStatus.longText)
+                        .font(.caption.weight(.semibold))
+                        .lineLimit(nil)
+                        .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                })
+            } compactLeading: {
+                makeView(for: "figure.run")
+            } compactTrailing: {
+                makeView(for: context.state.stateImageName)
+            } minimal: {
+                makeView(for: context.state.stateImageName)
+            }
         }
+    }
+    
+    func makeView(for imageName: String) -> some View {
+        ZStack {
+            Circle()
+                .foregroundColor(.white)
+            Image(systemName: imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .foregroundColor(.black)
+                .padding(6)
+        }
+        .padding(.vertical, 6)
     }
 }
 
-struct CoffeeDeliveryActivityWidgetView: View {
-    let attributes: CoffeeDeliveryAttributes
-    let state: CoffeeDeliveryAttributes.ContentState
 
+extension CoffeeDeliveryAttributes.ContentState {
     var stateImageName: String {
-        switch state.currentStatus {
+        switch currentStatus {
         case .recieved:
             return "cup.and.saucer.fill"
         case .preparing:
@@ -35,6 +74,11 @@ struct CoffeeDeliveryActivityWidgetView: View {
             return "box.truck.badge.clock.fill"
         }
     }
+}
+
+struct CoffeeDeliveryActivityWidgetView: View {
+    let attributes: CoffeeDeliveryAttributes
+    let state: CoffeeDeliveryAttributes.ContentState
 
     var body: some View {
         HStack {
@@ -49,7 +93,7 @@ struct CoffeeDeliveryActivityWidgetView: View {
             Spacer()
 
             VStack(alignment: .center, spacing: 6) {
-                Image(systemName: stateImageName)
+                Image(systemName: state.stateImageName)
                     .font(.headline.weight(.bold))
                 Text(state.currentStatus.displayText)
                     .font(.headline.weight(.semibold))
