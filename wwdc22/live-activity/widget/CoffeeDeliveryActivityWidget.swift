@@ -35,11 +35,11 @@ struct CoffeeDeliveryActivityWidget: Widget {
                     HStack(alignment: .center) {
                         ZStack {
                             Circle()
-                                .foregroundColor(.white)
+                                .foregroundStyle(Color.cyan.gradient)
                             Image(systemName: context.state.stateImageName)
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .foregroundColor(.black)
+                                .foregroundColor(.white)
                                 .padding(12)
                         }
                     }
@@ -64,6 +64,7 @@ struct CoffeeDeliveryActivityWidget: Widget {
 //                                .padding(12)
 //                        }
 //                    }
+//                    .frame(maxWidth: .infinity)
 //                }
             } compactLeading: {
                 makeView(for: "figure.run")
