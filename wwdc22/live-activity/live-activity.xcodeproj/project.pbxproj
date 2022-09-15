@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA9137ED28D3355100537C53 /* CounterWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9137EC28D3355100537C53 /* CounterWidget.swift */; };
+		FA9137EF28D3357300537C53 /* CounterActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9137EE28D3357300537C53 /* CounterActivity.swift */; };
+		FA9137F028D3370600537C53 /* CounterActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9137EE28D3357300537C53 /* CounterActivity.swift */; };
 		FA95E4A0289332C300A8882B /* CoffeeOrderActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6E42628933074009B1C57 /* CoffeeOrderActivity.swift */; };
 		FA95E4A22893393100A8882B /* CoffeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95E4A12893393100A8882B /* CoffeeModel.swift */; };
 		FAD6E3FC289326B3009B1C57 /* live_activityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD6E3FB289326B3009B1C57 /* live_activityApp.swift */; };
@@ -49,6 +52,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA9137EC28D3355100537C53 /* CounterWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterWidget.swift; sourceTree = "<group>"; };
+		FA9137EE28D3357300537C53 /* CounterActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterActivity.swift; sourceTree = "<group>"; };
 		FA95E4A12893393100A8882B /* CoffeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeModel.swift; sourceTree = "<group>"; };
 		FAD6E3F8289326B3009B1C57 /* live-activity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "live-activity.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD6E3FB289326B3009B1C57 /* live_activityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = live_activityApp.swift; sourceTree = "<group>"; };
@@ -147,6 +152,7 @@
 				FAD6E41928933055009B1C57 /* Assets.xcassets */,
 				FAD6E41B28933055009B1C57 /* Info.plist */,
 				FAD6E42828933182009B1C57 /* CoffeeDeliveryActivityWidget.swift */,
+				FA9137EC28D3355100537C53 /* CounterWidget.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -155,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				FAD6E42628933074009B1C57 /* CoffeeOrderActivity.swift */,
+				FA9137EE28D3357300537C53 /* CounterActivity.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -265,6 +272,7 @@
 				FAD6E42728933074009B1C57 /* CoffeeOrderActivity.swift in Sources */,
 				FAD6E3FE289326B3009B1C57 /* ContentView.swift in Sources */,
 				FAD6E3FC289326B3009B1C57 /* live_activityApp.swift in Sources */,
+				FA9137F028D3370600537C53 /* CounterActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +282,10 @@
 			files = (
 				FAD6E41C28933055009B1C57 /* widget.intentdefinition in Sources */,
 				FA95E4A0289332C300A8882B /* CoffeeOrderActivity.swift in Sources */,
+				FA9137ED28D3355100537C53 /* CounterWidget.swift in Sources */,
 				FAD6E41728933053009B1C57 /* widget.swift in Sources */,
 				FAD6E42A289331AC009B1C57 /* CoffeeDeliveryActivityWidget.swift in Sources */,
+				FA9137EF28D3357300537C53 /* CounterActivity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

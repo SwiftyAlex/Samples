@@ -44,22 +44,44 @@ struct ContentView: View {
                 }
             }
             
+            // Second Activity
+            
             if model.secondActivity != nil {
                 Section {
-                    stopSecondActivityButton
+                    if model.secondActivity != nil {
+                        stopSecondActivityButton
+                    } else {
+                        startSecondActivityButton
+                    }
                 }
-            } else {
-                Section {
-                    startSecondActivityButton
+            }
+            
+            // Counter
+            Section {
+                if model.counterActivity == nil {
+                    startCounterActivityButton
+                } else {
+                    if let counter = model.currentCount {
+                        Text(counter.formatted())
+                            .font(.subheadline.weight(.semibold))
+                    }
+                    stopCounterActivityButton
                 }
             }
 
+            // Permissions
             if !hasPermissions {
                 pushPermissionsButton
             }
         }
         .onAppear {
             updateNotificationStatus()
+        }
+        .onOpenURL { url in
+            print(url)
+            if url.pathComponents.last == "next" {
+                self.model.increment()
+            }
         }
     }
 
@@ -86,12 +108,7 @@ struct ContentView: View {
                 updateNotificationStatus()
             }
         }, label: {
-            Text("Request Permissions")
-                .font(.subheadline.weight(.semibold))
-                .foregroundColor(.white)
-                .padding()
-                .frame(maxWidth: .infinity, alignment: .center)
-                .background(RoundedRectangle(cornerRadius: 12))
+            makeButtonLabel("Request Permissions")
         })
         .listRowInsets(EdgeInsets())
     }
@@ -100,12 +117,7 @@ struct ContentView: View {
         Button(action: {
             model.start(coffeeName: "Flat White")
         }, label: {
-            Text("Start Activity")
-                .font(.subheadline.weight(.semibold))
-                .foregroundColor(.white)
-                .padding()
-                .frame(maxWidth: .infinity, alignment: .center)
-                .background(RoundedRectangle(cornerRadius: 12))
+            makeButtonLabel("Start activity")
         })
         .listRowInsets(EdgeInsets())
     }
@@ -114,12 +126,16 @@ struct ContentView: View {
         Button(action: {
             model.start(coffeeName: "Flat White", isSecond: true)
         }, label: {
-            Text("Start Second Activity")
-                .font(.subheadline.weight(.semibold))
-                .foregroundColor(.white)
-                .padding()
-                .frame(maxWidth: .infinity, alignment: .center)
-                .background(RoundedRectangle(cornerRadius: 12))
+            makeButtonLabel("Start second activity")
+        })
+        .listRowInsets(EdgeInsets())
+    }
+    
+    var startCounterActivityButton: some View {
+        Button(action: {
+            model.startCounter()
+        }, label: {
+            makeButtonLabel("Start interactive activity")
         })
         .listRowInsets(EdgeInsets())
     }
@@ -128,12 +144,7 @@ struct ContentView: View {
         Button(action: {
             model.stop()
         }, label: {
-            Text("Stop Activity")
-                .font(.subheadline.weight(.semibold))
-                .foregroundColor(.white)
-                .padding()
-                .frame(maxWidth: .infinity, alignment: .center)
-                .background(RoundedRectangle(cornerRadius: 12))
+            makeButtonLabel("Stop Activity")
         })
         .listRowInsets(EdgeInsets())
     }
@@ -142,14 +153,27 @@ struct ContentView: View {
         Button(action: {
             model.stop()
         }, label: {
-            Text("Stop Activity")
-                .font(.subheadline.weight(.semibold))
-                .foregroundColor(.white)
-                .padding()
-                .frame(maxWidth: .infinity, alignment: .center)
-                .background(RoundedRectangle(cornerRadius: 12))
+            makeButtonLabel("Stop second Activity")
         })
         .listRowInsets(EdgeInsets())
+    }
+    
+    var stopCounterActivityButton: some View {
+        Button(action: {
+            model.stopCounter()
+        }, label: {
+            makeButtonLabel("Stop Counter")
+        })
+        .listRowInsets(EdgeInsets())
+    }
+    
+    private func makeButtonLabel(_ text: String) -> some View {
+        Text(text)
+            .font(.subheadline.weight(.semibold))
+            .foregroundColor(.white)
+            .padding()
+            .frame(maxWidth: .infinity, alignment: .center)
+            .background(RoundedRectangle(cornerRadius: 12))
     }
 
     private func updateNotificationStatus() {

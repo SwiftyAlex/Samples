@@ -20,15 +20,19 @@ struct CoffeeDeliveryActivityWidget: Widget {
         } dynamicIsland: { context in
             DynamicIsland {
                 DynamicIslandExpandedRegion(.trailing, content: {
-                    ZStack {
-                        Circle()
-                            .foregroundColor(.white)
-                        Image(systemName: context.state.stateImageName)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.black)
-                            .padding(12)
+                    HStack(alignment: .center) {
+                        ZStack {
+                            Circle()
+                                .foregroundColor(.white)
+                            Image(systemName: context.state.stateImageName)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundColor(.black)
+                                .padding(12)
+                        }
+                        .frame(width: 44)
                     }
+                    .frame(maxHeight: .infinity)
                 })
                 DynamicIslandExpandedRegion(.leading, priority: .greatestFiniteMagnitude, content: {
                     Text(context.state.currentStatus.longText)

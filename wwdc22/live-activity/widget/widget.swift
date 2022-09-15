@@ -54,6 +54,7 @@ struct CoffeeWidgets: WidgetBundle {
         // Any other widgets
         widget()
         CoffeeDeliveryActivityWidget()
+        CounterWidget()
     }
 }
 

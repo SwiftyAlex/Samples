@@ -11,6 +11,8 @@ import ActivityKit
 class CoffeeModel: ObservableObject {
     @Published var liveActivity: Activity<CoffeeDeliveryAttributes>?
     @Published var secondActivity: Activity<CoffeeDeliveryAttributes>?
+    @Published var counterActivity: Activity<CounterActivityAttributes>?
+    @Published var currentCount: Int? = 0
 
     func start(coffeeName: String, isSecond: Bool = false) {
         guard ActivityAuthorizationInfo().areActivitiesEnabled else {
@@ -39,6 +41,30 @@ class CoffeeModel: ObservableObject {
             }
         }
     }
+    
+    func startCounter() {
+        guard ActivityAuthorizationInfo().areActivitiesEnabled else {
+            print("Activities are not enabled.")
+            return
+        }
+        Task {
+            let attributes = CounterActivityAttributes()
+            let state = CounterActivityAttributes.ContentState(count: currentCount ?? 0)
+            do {
+                try await MainActor.run {
+                    let activity = try Activity<CounterActivityAttributes>.request(
+                        attributes: attributes,
+                        contentState: state,
+                        pushType: nil
+                    )
+                    counterActivity = activity
+                }
+                print("Started counter activity")
+            } catch (let error) {
+                print("Error starting activity \(error) \(error.localizedDescription)")
+            }
+        }
+    }
 
     func updateActivity(state: CoffeeDeliveryStatus) {
         let state = CoffeeDeliveryAttributes.ContentState(currentStatus: state)
@@ -55,6 +81,16 @@ class CoffeeModel: ObservableObject {
             }
         }
     }
+    
+    func stopCounter() {
+        Task {
+            await counterActivity?.end(using: nil, dismissalPolicy: .immediate)
+            await MainActor.run {
+                counterActivity = nil
+                currentCount = nil
+            }
+        }
+    }
 
     func stopSecond() {
         Task {
@@ -62,6 +98,15 @@ class CoffeeModel: ObservableObject {
             await MainActor.run {
                 secondActivity = nil
             }
+        }
+    }
+    
+    func increment() {
+        let newCount = (currentCount ?? 0) + 1
+        currentCount = newCount
+        let state = CounterActivityAttributes.ContentState(count: newCount)
+        Task {
+            await counterActivity?.update(using: state)
         }
     }
 }
