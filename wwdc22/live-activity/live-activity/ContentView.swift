@@ -45,14 +45,12 @@ struct ContentView: View {
             }
             
             // Second Activity
-            
-            if model.secondActivity != nil {
-                Section {
-                    if model.secondActivity != nil {
-                        stopSecondActivityButton
-                    } else {
-                        startSecondActivityButton
-                    }
+
+            Section {
+                if model.secondActivity != nil {
+                    stopSecondActivityButton
+                } else {
+                    startSecondActivityButton
                 }
             }
             
@@ -151,7 +149,7 @@ struct ContentView: View {
     
     var stopSecondActivityButton: some View {
         Button(action: {
-            model.stop()
+            model.stopSecond()
         }, label: {
             makeButtonLabel("Stop second Activity")
         })

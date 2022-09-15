@@ -19,6 +19,18 @@ struct CoffeeDeliveryActivityWidget: Widget {
             )
         } dynamicIsland: { context in
             DynamicIsland {
+                DynamicIslandExpandedRegion(.leading, priority: .greatestFiniteMagnitude, content: {
+                    VStack(alignment: .leading) {
+                        Text(context.state.currentStatus.longText)
+                            .frame(maxWidth: 250, maxHeight: .infinity, alignment: .center) // Given such limited sizes, we're safe to do this
+                            .lineLimit(2, reservesSpace: false) // Don't reserve space to maintain centre alignment
+                            .font(.caption.weight(.semibold))
+                            .padding(.top, 16) // Top pad slightly to avoid the pill shape ( the modifier below doens't appear to work just yet )
+                    }
+                    .fixedSize(horizontal: true, vertical: false)
+                    .foregroundColor(.white)
+                    .dynamicIsland(verticalPlacement: .belowIfTooWide) // Doesn't appear to work just yet.
+                })
                 DynamicIslandExpandedRegion(.trailing, content: {
                     HStack(alignment: .center) {
                         ZStack {
@@ -30,16 +42,9 @@ struct CoffeeDeliveryActivityWidget: Widget {
                                 .foregroundColor(.black)
                                 .padding(12)
                         }
-                        .frame(width: 44)
                     }
-                    .frame(maxHeight: .infinity)
-                })
-                DynamicIslandExpandedRegion(.leading, priority: .greatestFiniteMagnitude, content: {
-                    Text(context.state.currentStatus.longText)
-                        .font(.caption.weight(.semibold))
-                        .lineLimit(nil)
-                        .multilineTextAlignment(.leading)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                    .frame(width: 44)
+                    .frame(maxHeight: .infinity, alignment: .center)
                 })
                 // Alternate solution
 //                DynamicIslandExpandedRegion(.center, priority: .greatestFiniteMagnitude) {
