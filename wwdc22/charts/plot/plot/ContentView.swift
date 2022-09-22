@@ -14,6 +14,7 @@ struct Run: Identifiable, Hashable {
     var distanceKm: Double
     var sleepHours: Double = Double.random(in: 0..<8)
     var day: String
+    var color: Color = Color.teal
 }
 
 struct ContentView: View {

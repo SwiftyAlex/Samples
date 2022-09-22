@@ -11,13 +11,13 @@ import Charts
 struct WeeklyChartsView: View {
     // You could ( and should ) store this more elegantly
     @State var data: [Run] = [
-        .init(distanceKm: 12.5, day: "Monday"),
-        .init(distanceKm: 6.7, day: "Tuesday"),
-        .init(distanceKm: 0, day: "Wednesday"),
-        .init(distanceKm: 21.2, day: "Thursday"),
-        .init(distanceKm: 10.4, day: "Friday"),
-        .init(distanceKm: 4.3, day: "Saturday"),
-        .init(distanceKm: 36.5, day: "Sunday"),
+        .init(distanceKm: 12.5, day: "Monday", color: .teal),
+        .init(distanceKm: 6.7, day: "Tuesday", color: .pink),
+        .init(distanceKm: 0, day: "Wednesday", color: .yellow),
+        .init(distanceKm: 21.2, day: "Thursday", color: .green),
+        .init(distanceKm: 10.4, day: "Friday", color: .red),
+        .init(distanceKm: 4.3, day: "Saturday", color: .brown),
+        .init(distanceKm: 36.5, day: "Sunday", color: .black),
     ]
 
     @State var dataTwo: [Run] = [
@@ -87,13 +87,7 @@ struct WeeklyChartsView: View {
                         x: .value("Date", run.day),
                         y: .value("Distance", run.distanceKm)
                     )
-                    .foregroundStyle(
-                        .linearGradient(
-                            colors: [.blue, .teal],
-                            startPoint: .top,
-                            endPoint: .bottom
-                        )
-                    )
+                    .foregroundStyle(run.color.gradient)
                 }
             }
             .frame(height: 200)
