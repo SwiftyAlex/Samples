@@ -20,8 +20,17 @@ enum AppIcon: String, CaseIterable {
             return nil
         }
     }
+
+    var iconNameThumb: String? {
+        switch self {
+        case .alternate:
+            return "AlternateIconThumb"
+        default:
+            return "AppIconThumb"
+        }
+    }
     
     var icon: UIImage {
-        return UIImage(named: iconName ?? "AppIcon") ?? UIImage()
+        return UIImage(named: iconNameThumb ?? iconName ?? "AppIcon") ?? UIImage()
     }
 }
