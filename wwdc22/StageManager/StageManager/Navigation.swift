@@ -60,7 +60,7 @@ struct Navigation: View {
     }
     
     var pageOne: some View {
-        Image(systemName: Screen.basketball.iconName)
+        ColorGrid()
             .font(.headline)
             .tabItem({
                 Label(

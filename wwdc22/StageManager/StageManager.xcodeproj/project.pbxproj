@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA307A4A28FF41920095F25B /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA307A4928FF41920095F25B /* AppColor.swift */; };
+		FA307A4E28FF42340095F25B /* ColorGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA307A4D28FF42340095F25B /* ColorGrid.swift */; };
 		FAF9C61128CFDED000A5EF7F /* StageManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9C61028CFDED000A5EF7F /* StageManagerApp.swift */; };
 		FAF9C61328CFDED000A5EF7F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF9C61228CFDED000A5EF7F /* ContentView.swift */; };
 		FAF9C61528CFDED100A5EF7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF9C61428CFDED100A5EF7F /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA307A4928FF41920095F25B /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		FA307A4D28FF42340095F25B /* ColorGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGrid.swift; sourceTree = "<group>"; };
 		FAF9C60D28CFDED000A5EF7F /* StageManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StageManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF9C61028CFDED000A5EF7F /* StageManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageManagerApp.swift; sourceTree = "<group>"; };
 		FAF9C61228CFDED000A5EF7F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				FAF9C61728CFDED100A5EF7F /* Preview Content */,
 				FAF9C61F28CFDEE400A5EF7F /* Navigation.swift */,
 				FAF9C62128CFE45300A5EF7F /* Screen.swift */,
+				FA307A4928FF41920095F25B /* AppColor.swift */,
+				FA307A4D28FF42340095F25B /* ColorGrid.swift */,
 			);
 			path = StageManager;
 			sourceTree = "<group>";
@@ -146,7 +152,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF9C62028CFDEE400A5EF7F /* Navigation.swift in Sources */,
+				FA307A4A28FF41920095F25B /* AppColor.swift in Sources */,
 				FAF9C61328CFDED000A5EF7F /* ContentView.swift in Sources */,
+				FA307A4E28FF42340095F25B /* ColorGrid.swift in Sources */,
 				FAF9C61128CFDED000A5EF7F /* StageManagerApp.swift in Sources */,
 				FAF9C62228CFE45300A5EF7F /* Screen.swift in Sources */,
 			);
