@@ -53,7 +53,7 @@ struct BrewerDetailView: View {
                 BrewForm(brewer: brewer)
             }
         })
-        .navigationTitle("Brewers")
+        .navigationTitle(brewer.name)
     }
 
     func delete(brew: Brew) {
