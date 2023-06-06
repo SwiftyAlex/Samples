@@ -13,6 +13,7 @@
 		FA4E233F2A2EBE45005A20C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA4E233E2A2EBE45005A20C0 /* Preview Assets.xcassets */; };
 		FA4E23412A2EBE45005A20C0 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E23402A2EBE45005A20C0 /* Item.swift */; };
 		FA4E23482A2EBE4E005A20C0 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E23472A2EBE4E005A20C0 /* Counter.swift */; };
+		FAA1E07F2A2F433D006858AE /* BindingObservables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1E07E2A2F433D006858AE /* BindingObservables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		FA4E233E2A2EBE45005A20C0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA4E23402A2EBE45005A20C0 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FA4E23472A2EBE4E005A20C0 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		FAA1E07E2A2F433D006858AE /* BindingObservables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingObservables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				FA4E23402A2EBE45005A20C0 /* Item.swift */,
 				FA4E233D2A2EBE45005A20C0 /* Preview Content */,
 				FA4E23472A2EBE4E005A20C0 /* Counter.swift */,
+				FAA1E07E2A2F433D006858AE /* BindingObservables.swift */,
 			);
 			path = ObservableDemo;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				FA4E23482A2EBE4E005A20C0 /* Counter.swift in Sources */,
 				FA4E233A2A2EBE44005A20C0 /* ContentView.swift in Sources */,
+				FAA1E07F2A2F433D006858AE /* BindingObservables.swift in Sources */,
 				FA4E23412A2EBE45005A20C0 /* Item.swift in Sources */,
 				FA4E23382A2EBE44005A20C0 /* ObservableDemoApp.swift in Sources */,
 			);

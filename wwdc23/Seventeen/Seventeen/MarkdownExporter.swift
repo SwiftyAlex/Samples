@@ -41,6 +41,8 @@ struct MarkdownExporter: View {
 
 struct MarkdownFile: FileDocument {
     static var readableContentTypes = [UTType.plainText]
+    static var writableContentTypes = [UTType.plainText]
+
     var text = """
     # Hello <3
     """
