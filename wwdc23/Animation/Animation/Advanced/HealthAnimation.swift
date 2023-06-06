@@ -7,8 +7,12 @@
 
 import SwiftUI
 
-enum AnimationPhase: Int, CaseIterable {
-    case idle = 0, icon, innerCircle, outerCircle
+enum AnimationPhase: Int, CaseIterable, Animatable, Comparable {
+    static func < (lhs: AnimationPhase, rhs: AnimationPhase) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+
+    case idle = 0, icon, innerCircle, outerCircle, pulse
 }
 
 struct HealthAnimation: View {
@@ -17,16 +21,14 @@ struct HealthAnimation: View {
     var body: some View {
         VStack {
             animation
-
-            Button(action: { animate.toggle() }, label: {
-                Text("Start Animation")
-            })
         }
 
     }
 
     var animation: some View {
-        PhaseAnimator(AnimationPhase.allCases, trigger: animate, content: { phase in
+        PhaseAnimator(
+            AnimationPhase.allCases,
+            content: { phase in
             GeometryReader { geometry in
                 ZStack(alignment: .center) {
                     let center = CGPoint(
@@ -39,14 +41,17 @@ struct HealthAnimation: View {
                             .transition(
                                 .opacity.combined(with: .scale(scale: 0.8))
                             )
+                            .scaleEffect(phase == .pulse ? 1.01 : 1)
+                            .rotationEffect(.degrees(phase == .pulse ? 2 : 0))
                     }
 
                     if phase.rawValue > AnimationPhase.icon.rawValue {
                         InnerCircle(center: center)
                             .transition(
                                 .opacity.combined(with: .scale(scale: 0.6))
-
                             )
+                            .scaleEffect(phase == .pulse ? 1.01 : 1)
+                            .rotationEffect(.degrees(phase == .pulse ? -2 : 0))
                     }
 
                     if phase.rawValue >= AnimationPhase.icon.rawValue {
@@ -64,16 +69,22 @@ struct HealthAnimation: View {
             .frame(width: 400, height: 400, alignment: .center)
         }, animation: { phase in
             switch phase {
-            case .idle: .none
-            case .icon: .timingCurve(0.34, 1.56, 0.64, 1, duration: 0.6)
-            case .innerCircle: .timingCurve(0.34, 1.56, 0.64, 1, duration: 0.6)
-            case .outerCircle: .timingCurve(0.34, 1.56, 0.64, 1, duration: 0.6)
+            case .idle:
+                    .bouncy
+            case .icon:
+                    .timingCurve(0.34, 1.56, 0.64, 1, duration: 0.6)
+            case .innerCircle:
+                    .timingCurve(0.34, 1.56, 0.64, 1, duration: 0.4)
+            case .outerCircle:
+                    .timingCurve(0.34, 1.56, 0.64, 1, duration: 0.6)
+            case .pulse:
+                    .bouncy(duration: 2)
             }
         })
     }
 }
 
-private struct OuterCircle: View {
+struct OuterCircle: View {
     let center: CGPoint
 
     var body: some View {
@@ -107,7 +118,7 @@ private struct OuterCircle: View {
     }
 }
 
-private struct InnerCircle: View {
+struct InnerCircle: View {
     let center: CGPoint
 
     var body: some View {

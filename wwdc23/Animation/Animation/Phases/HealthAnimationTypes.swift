@@ -85,7 +85,7 @@ enum OuterIcon: CaseIterable {
         case .bandaid:
             return .blue.opacity(0.5)
         case .medicalChart:
-            return .black
+            return .primary
         case .heart:
             return .pink
         case .lungs:
