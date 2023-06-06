@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 @Model final class Brewer {
-    var name: String
+    var name: String = ""
 
     @Relationship(.cascade, inverse: \Brew.brewer)
     var brews: [Brew] = []
