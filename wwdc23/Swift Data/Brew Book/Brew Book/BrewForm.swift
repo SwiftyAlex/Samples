@@ -52,10 +52,13 @@ struct BrewForm: View {
             rating: rating,
             brewDate: brewDate
         )
-        // Set the inverse of the relationship
-        brew.brewer = brewer
 
-        context.insert(brew)
+        // Setting the inverse of the relationship does not live update as you'd expect
+        // brew.brewer = brewer
+        // context.insert(brew)
+
+        // Setting this way, does, so we'll do that for now.
+        brewer.brews.append(brew)
         do {
             // Try to save
             try context.save()

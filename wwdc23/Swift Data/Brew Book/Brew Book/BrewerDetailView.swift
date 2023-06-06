@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-/// NOTE: Live update is currently not working, so after adding a brew you'll need to go back out of this view and come back in.
-/// This should be fixed in a future beta, but for now, after deleting a brew, or adding a new one, you'll need to peek and pop this view.
+/// NOTE: Live update only works due to the trick with deletion shown below.
 struct BrewerDetailView: View {
     @Environment(\.modelContext) var context
     @State var showAddBrew: Bool = false
@@ -57,7 +56,13 @@ struct BrewerDetailView: View {
     }
 
     func delete(brew: Brew) {
-        context.delete(brew)
+        withAnimation {
+            context.delete(brew)
+            // We have to explicitly remove from the array, or the view won't update.
+            brewer.brews.removeAll(where: { innerBrew in
+                innerBrew == brew
+            })
+        }
         do {
             try context.save()
         } catch {
@@ -72,7 +77,7 @@ private struct BrewView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(brew.type.rawValue)
+                Text(brew.brewType.rawValue)
                     .fontWeight(.semibold)
                     .foregroundStyle(.primary)
                 Text(brew.rating.formatted())
