@@ -60,7 +60,7 @@ struct WidgetEntryView : View {
             }
             .padding()
         }
-        .containerBackground(.fill.tertiary, for: .widget)
+        .containerBackground(.fill.quaternary.opacity(0.1), for: .widget)
     }
 }
 
@@ -71,6 +71,7 @@ struct CounterWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             WidgetEntryView(entry: entry)
         }
+        .containerBackgroundRemovable(true)
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
     }
