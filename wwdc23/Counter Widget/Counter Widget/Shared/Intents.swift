@@ -23,7 +23,7 @@ final class IncrementIntent: LiveActivityIntent {
 
 
 final class DecrementIntent: LiveActivityIntent {
-    static var title: LocalizedStringResource = "Increment"
+    static var title: LocalizedStringResource = "Decrement"
 
     public init() { }
 
