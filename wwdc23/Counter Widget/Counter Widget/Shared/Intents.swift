@@ -35,7 +35,7 @@ final class DecrementIntent: LiveActivityIntent {
     }
 }
 
-final class CounterIntent: LiveActivityIntent {
+struct CounterIntent: LiveActivityIntent {
     static var title: LocalizedStringResource = "Counter"
 
     @Parameter(title: "Amount")
@@ -51,7 +51,7 @@ final class CounterIntent: LiveActivityIntent {
     public func perform() async throws -> some IntentResult {
         let suite = UserDefaults(suiteName: Constants.suiteName)
         let counter = suite?.integer(forKey: Constants.key) ?? 0
-        suite?.setValue(counter-1, forKey: Constants.key)
+        suite?.setValue(counter+amount, forKey: Constants.key)
         return .result(value: counter)
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA1507D32A30ACEE00FF20F9 /* ScrollAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1507D22A30ACEE00FF20F9 /* ScrollAnimator.swift */; };
 		FA8E45EC2A2F8901009D85A4 /* SimplePhasedAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E45EB2A2F8901009D85A4 /* SimplePhasedAnimation.swift */; };
 		FA8E45EE2A2F8B5B009D85A4 /* SquarePhasedAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E45ED2A2F8B5B009D85A4 /* SquarePhasedAnimation.swift */; };
 		FA8E45F12A2F8D76009D85A4 /* KeyframeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E45F02A2F8D76009D85A4 /* KeyframeAnimation.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA1507D22A30ACEE00FF20F9 /* ScrollAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollAnimator.swift; sourceTree = "<group>"; };
 		FA8E45EB2A2F8901009D85A4 /* SimplePhasedAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePhasedAnimation.swift; sourceTree = "<group>"; };
 		FA8E45ED2A2F8B5B009D85A4 /* SquarePhasedAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquarePhasedAnimation.swift; sourceTree = "<group>"; };
 		FA8E45F02A2F8D76009D85A4 /* KeyframeAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyframeAnimation.swift; sourceTree = "<group>"; };
@@ -44,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA1507D12A30ACD500FF20F9 /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				FA1507D22A30ACEE00FF20F9 /* ScrollAnimator.swift */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
 		FA8E45EF2A2F8D6A009D85A4 /* Keyframes */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +89,7 @@
 		FAA1E0512A2F2C07006858AE /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				FA1507D12A30ACD500FF20F9 /* ScrollView */,
 				FA8E45F22A2F95CB009D85A4 /* Advanced */,
 				FA8E45EF2A2F8D6A009D85A4 /* Keyframes */,
 				FAA1E0822A2F4F9A006858AE /* Phases */,
@@ -186,6 +197,7 @@
 				FA8E45EE2A2F8B5B009D85A4 /* SquarePhasedAnimation.swift in Sources */,
 				FAA1E0532A2F2C07006858AE /* AnimationApp.swift in Sources */,
 				FA8E45F12A2F8D76009D85A4 /* KeyframeAnimation.swift in Sources */,
+				FA1507D32A30ACEE00FF20F9 /* ScrollAnimator.swift in Sources */,
 				FA8E45EC2A2F8901009D85A4 /* SimplePhasedAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
