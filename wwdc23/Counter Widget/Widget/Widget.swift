@@ -47,14 +47,14 @@ struct WidgetEntryView : View {
                 .contentTransition(.numericText(countsDown: false))
 
             HStack {
-                Button(intent: DecrementIntent(), label: {
+                Button(intent: CounterIntent(amount: -1), label: {
                     Image(systemName: "minus.circle.fill")
                 })
 
 
                Spacer()
 
-               Button(intent: IncrementIntent(), label: {
+               Button(intent: CounterIntent(amount: 1), label: {
                    Image(systemName: "plus.circle.fill")
                })
             }
