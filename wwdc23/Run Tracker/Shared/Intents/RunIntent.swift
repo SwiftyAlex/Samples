@@ -11,6 +11,8 @@ import AppIntents
 struct RunIntent: LiveActivityIntent, WidgetConfigurationIntent {
     static var title: LocalizedStringResource = "Track your run"
 
+    static var openAppWhenRun: Bool = false
+
     @Parameter(title: "Your run distance", optionsProvider: RunOptionsProvider())
     var run: CommonRun
 
