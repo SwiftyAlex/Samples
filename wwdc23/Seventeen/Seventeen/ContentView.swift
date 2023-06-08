@@ -14,6 +14,9 @@ struct ContentView: View {
                 NavigationLink(destination: MarkdownExporter()) {
                     Text("File Exporter")
                 }
+                NavigationLink(destination: PlayerView(), label: {
+                    Text("Audio Player")
+                })
             }
             .navigationTitle("Seventeen")
         }

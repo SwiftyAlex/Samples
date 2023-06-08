@@ -23,7 +23,7 @@ struct MarkdownExporter: View {
         .fileExporter(
             isPresented: $exportFile, // Binding for presentation
             document: MarkdownFile(), // Custom `FileDocument`
-            contentType: .plainText, // Tell it what UTType you're using
+            contentTypes: [.plainText], // Tell it what UTType you're using
             defaultFilename: "Markdown", // What do you want to call it?
             onCompletion: { saveResult in
                 switch saveResult {
@@ -34,7 +34,11 @@ struct MarkdownExporter: View {
                     // Why it failed
                     print(error.localizedDescription)
                 }
-            })
+            },
+            onCancellation: { 
+
+            }
+        )
         .padding()
     }
 }

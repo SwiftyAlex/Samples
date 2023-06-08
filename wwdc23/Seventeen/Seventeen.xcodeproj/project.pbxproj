@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA46B31B2A32133D00C0CF4E /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA46B31A2A32133D00C0CF4E /* song.mp3 */; };
+		FA46B31E2A32134900C0CF4E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46B31D2A32134900C0CF4E /* Player.swift */; };
+		FA46B3202A32144700C0CF4E /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46B31F2A32144700C0CF4E /* PlayerView.swift */; };
+		FA46B3292A3214B500C0CF4E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA46B3282A3214B500C0CF4E /* WidgetKit.framework */; };
+		FA46B32B2A3214B500C0CF4E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA46B32A2A3214B500C0CF4E /* SwiftUI.framework */; };
+		FA46B32E2A3214B500C0CF4E /* Seventeen_WidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46B32D2A3214B500C0CF4E /* Seventeen_WidgetsBundle.swift */; };
+		FA46B3302A3214B600C0CF4E /* ControlsWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46B32F2A3214B600C0CF4E /* ControlsWidget.swift */; };
+		FA46B3322A3214B600C0CF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA46B3312A3214B600C0CF4E /* Assets.xcassets */; };
+		FA46B3362A3214B600C0CF4E /* Seventeen WidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FA46B3262A3214B500C0CF4E /* Seventeen WidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FA46B33E2A3214CE00C0CF4E /* PlayerIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46B33D2A3214CE00C0CF4E /* PlayerIntent.swift */; };
+		FA46B33F2A3214EA00C0CF4E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46B31D2A32134900C0CF4E /* Player.swift */; };
+		FA46B3402A3215DE00C0CF4E /* PlayerIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA46B33D2A3214CE00C0CF4E /* PlayerIntent.swift */; };
 		FAA1E06F2A2F3902006858AE /* SeventeenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1E06E2A2F3902006858AE /* SeventeenApp.swift */; };
 		FAA1E0712A2F3902006858AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1E0702A2F3902006858AE /* ContentView.swift */; };
 		FAA1E0732A2F3904006858AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA1E0722A2F3904006858AE /* Assets.xcassets */; };
@@ -14,7 +26,43 @@
 		FAA1E07D2A2F390C006858AE /* MarkdownExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1E07C2A2F390C006858AE /* MarkdownExporter.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FA46B3342A3214B600C0CF4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA1E0632A2F3902006858AE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA46B3252A3214B500C0CF4E;
+			remoteInfo = "Seventeen WidgetsExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA46B33A2A3214B600C0CF4E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FA46B3362A3214B600C0CF4E /* Seventeen WidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		FA46B31A2A32133D00C0CF4E /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
+		FA46B31D2A32134900C0CF4E /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		FA46B31F2A32144700C0CF4E /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		FA46B3212A32148F00C0CF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FA46B3262A3214B500C0CF4E /* Seventeen WidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Seventeen WidgetsExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA46B3282A3214B500C0CF4E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		FA46B32A2A3214B500C0CF4E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		FA46B32D2A3214B500C0CF4E /* Seventeen_WidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seventeen_WidgetsBundle.swift; sourceTree = "<group>"; };
+		FA46B32F2A3214B600C0CF4E /* ControlsWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsWidget.swift; sourceTree = "<group>"; };
+		FA46B3312A3214B600C0CF4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA46B3332A3214B600C0CF4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA46B33D2A3214CE00C0CF4E /* PlayerIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerIntent.swift; sourceTree = "<group>"; };
 		FAA1E06B2A2F3902006858AE /* Seventeen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seventeen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA1E06E2A2F3902006858AE /* SeventeenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeventeenApp.swift; sourceTree = "<group>"; };
 		FAA1E0702A2F3902006858AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +72,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FA46B3232A3214B500C0CF4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA46B32B2A3214B500C0CF4E /* SwiftUI.framework in Frameworks */,
+				FA46B3292A3214B500C0CF4E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAA1E0682A2F3902006858AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -34,10 +91,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA46B31C2A32134000C0CF4E /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				FA46B31A2A32133D00C0CF4E /* song.mp3 */,
+				FA46B31D2A32134900C0CF4E /* Player.swift */,
+				FA46B31F2A32144700C0CF4E /* PlayerView.swift */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		FA46B3272A3214B500C0CF4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA46B3282A3214B500C0CF4E /* WidgetKit.framework */,
+				FA46B32A2A3214B500C0CF4E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA46B32C2A3214B500C0CF4E /* Seventeen Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				FA46B32D2A3214B500C0CF4E /* Seventeen_WidgetsBundle.swift */,
+				FA46B32F2A3214B600C0CF4E /* ControlsWidget.swift */,
+				FA46B3312A3214B600C0CF4E /* Assets.xcassets */,
+				FA46B3332A3214B600C0CF4E /* Info.plist */,
+			);
+			path = "Seventeen Widgets";
+			sourceTree = "<group>";
+		};
+		FA46B33C2A3214C500C0CF4E /* Intents */ = {
+			isa = PBXGroup;
+			children = (
+				FA46B33D2A3214CE00C0CF4E /* PlayerIntent.swift */,
+			);
+			path = Intents;
+			sourceTree = "<group>";
+		};
 		FAA1E0622A2F3902006858AE = {
 			isa = PBXGroup;
 			children = (
+				FA46B33C2A3214C500C0CF4E /* Intents */,
 				FAA1E06D2A2F3902006858AE /* Seventeen */,
+				FA46B32C2A3214B500C0CF4E /* Seventeen Widgets */,
+				FA46B3272A3214B500C0CF4E /* Frameworks */,
 				FAA1E06C2A2F3902006858AE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				FAA1E06B2A2F3902006858AE /* Seventeen.app */,
+				FA46B3262A3214B500C0CF4E /* Seventeen WidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -53,6 +152,8 @@
 		FAA1E06D2A2F3902006858AE /* Seventeen */ = {
 			isa = PBXGroup;
 			children = (
+				FA46B3212A32148F00C0CF4E /* Info.plist */,
+				FA46B31C2A32134000C0CF4E /* Music */,
 				FAA1E06E2A2F3902006858AE /* SeventeenApp.swift */,
 				FAA1E0702A2F3902006858AE /* ContentView.swift */,
 				FAA1E0722A2F3904006858AE /* Assets.xcassets */,
@@ -73,6 +174,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FA46B3252A3214B500C0CF4E /* Seventeen WidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA46B3372A3214B600C0CF4E /* Build configuration list for PBXNativeTarget "Seventeen WidgetsExtension" */;
+			buildPhases = (
+				FA46B3222A3214B500C0CF4E /* Sources */,
+				FA46B3232A3214B500C0CF4E /* Frameworks */,
+				FA46B3242A3214B500C0CF4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Seventeen WidgetsExtension";
+			productName = "Seventeen WidgetsExtension";
+			productReference = FA46B3262A3214B500C0CF4E /* Seventeen WidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		FAA1E06A2A2F3902006858AE /* Seventeen */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAA1E0792A2F3904006858AE /* Build configuration list for PBXNativeTarget "Seventeen" */;
@@ -80,10 +198,12 @@
 				FAA1E0672A2F3902006858AE /* Sources */,
 				FAA1E0682A2F3902006858AE /* Frameworks */,
 				FAA1E0692A2F3902006858AE /* Resources */,
+				FA46B33A2A3214B600C0CF4E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FA46B3352A3214B600C0CF4E /* PBXTargetDependency */,
 			);
 			name = Seventeen;
 			productName = Seventeen;
@@ -100,6 +220,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					FA46B3252A3214B500C0CF4E = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					FAA1E06A2A2F3902006858AE = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -119,15 +242,25 @@
 			projectRoot = "";
 			targets = (
 				FAA1E06A2A2F3902006858AE /* Seventeen */,
+				FA46B3252A3214B500C0CF4E /* Seventeen WidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FA46B3242A3214B500C0CF4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA46B3322A3214B600C0CF4E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAA1E0692A2F3902006858AE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA46B31B2A32133D00C0CF4E /* song.mp3 in Resources */,
 				FAA1E0762A2F3904006858AE /* Preview Assets.xcassets in Resources */,
 				FAA1E0732A2F3904006858AE /* Assets.xcassets in Resources */,
 			);
@@ -136,19 +269,95 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FA46B3222A3214B500C0CF4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA46B3402A3215DE00C0CF4E /* PlayerIntent.swift in Sources */,
+				FA46B32E2A3214B500C0CF4E /* Seventeen_WidgetsBundle.swift in Sources */,
+				FA46B33F2A3214EA00C0CF4E /* Player.swift in Sources */,
+				FA46B3302A3214B600C0CF4E /* ControlsWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAA1E0672A2F3902006858AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				FAA1E07D2A2F390C006858AE /* MarkdownExporter.swift in Sources */,
 				FAA1E0712A2F3902006858AE /* ContentView.swift in Sources */,
+				FA46B3202A32144700C0CF4E /* PlayerView.swift in Sources */,
+				FA46B31E2A32134900C0CF4E /* Player.swift in Sources */,
+				FA46B33E2A3214CE00C0CF4E /* PlayerIntent.swift in Sources */,
 				FAA1E06F2A2F3902006858AE /* SeventeenApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FA46B3352A3214B600C0CF4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA46B3252A3214B500C0CF4E /* Seventeen WidgetsExtension */;
+			targetProxy = FA46B3342A3214B600C0CF4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		FA46B3382A3214B600C0CF4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VLU7X6Y8EY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Seventeen Widgets/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Seventeen Widgets";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.alexanderlogan.samples.Seventeen.Seventeen-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FA46B3392A3214B600C0CF4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VLU7X6Y8EY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Seventeen Widgets/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Seventeen Widgets";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.alexanderlogan.samples.Seventeen.Seventeen-Widgets";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		FAA1E0772A2F3904006858AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -271,6 +480,7 @@
 		FAA1E07A2A2F3904006858AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -279,6 +489,7 @@
 				DEVELOPMENT_TEAM = VLU7X6Y8EY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Seventeen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -300,6 +511,7 @@
 		FAA1E07B2A2F3904006858AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +520,7 @@
 				DEVELOPMENT_TEAM = VLU7X6Y8EY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Seventeen/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -329,6 +542,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FA46B3372A3214B600C0CF4E /* Build configuration list for PBXNativeTarget "Seventeen WidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA46B3382A3214B600C0CF4E /* Debug */,
+				FA46B3392A3214B600C0CF4E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FAA1E0662A2F3902006858AE /* Build configuration list for PBXProject "Seventeen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
