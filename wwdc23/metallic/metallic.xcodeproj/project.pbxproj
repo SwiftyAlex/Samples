@@ -17,6 +17,7 @@
 		FA9D8BA52A38F49900CDD17A /* GradientSubtract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8BA42A38F49900CDD17A /* GradientSubtract.swift */; };
 		FA9D8BA72A38F53D00CDD17A /* PixelFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8BA62A38F53D00CDD17A /* PixelFlip.swift */; };
 		FA9D8BA92A38F5B000CDD17A /* CircleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8BA82A38F5B000CDD17A /* CircleLoader.swift */; };
+		FA9D8BAB2A38F66300CDD17A /* RemoveRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		FA9D8BA42A38F49900CDD17A /* GradientSubtract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSubtract.swift; sourceTree = "<group>"; };
 		FA9D8BA62A38F53D00CDD17A /* PixelFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelFlip.swift; sourceTree = "<group>"; };
 		FA9D8BA82A38F5B000CDD17A /* CircleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLoader.swift; sourceTree = "<group>"; };
+		FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				FA9D8BA42A38F49900CDD17A /* GradientSubtract.swift */,
 				FA9D8BA62A38F53D00CDD17A /* PixelFlip.swift */,
 				FA9D8BA82A38F5B000CDD17A /* CircleLoader.swift */,
+				FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				FA9D8B9F2A38F32500CDD17A /* Shaders.metal in Sources */,
 				FA9D8BA72A38F53D00CDD17A /* PixelFlip.swift in Sources */,
 				FA9D8BA12A38F37000CDD17A /* Aqua.swift in Sources */,
+				FA9D8BAB2A38F66300CDD17A /* RemoveRed.swift in Sources */,
 				FA9D8BA32A38F3E000CDD17A /* Gradientify.swift in Sources */,
 				FA9D8B912A38F31400CDD17A /* ContentView.swift in Sources */,
 				FA9D8B8F2A38F31400CDD17A /* metallicApp.swift in Sources */,

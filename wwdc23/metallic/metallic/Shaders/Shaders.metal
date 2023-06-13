@@ -33,6 +33,15 @@ using namespace metal;
     return half4(col.x, col.y, col.z, 1);
 }
 
+// MARK: - Remove Red
+[[ stitchable ]] half4 removeRed(
+    float2 position,
+    half4 color
+) {
+    color.x = 0;
+    return color;
+}
+
 // MARK: - Gradient Subtract
 [[ stitchable ]] half4 gradientSubtract(
     float2 position,

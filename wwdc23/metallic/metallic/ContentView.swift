@@ -17,6 +17,9 @@ struct ContentView: View {
                 NavigationLink(destination: Gradientify()) {
                     Text("Gradientify")
                 }
+                NavigationLink(destination: RemoveRed()) {
+                    Text("Remove Red")
+                }
                 NavigationLink(destination: GradientSubtract()) {
                     Text("Gradient Subtract")
                 }
