@@ -18,6 +18,7 @@
 		FA9D8BA72A38F53D00CDD17A /* PixelFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8BA62A38F53D00CDD17A /* PixelFlip.swift */; };
 		FA9D8BA92A38F5B000CDD17A /* CircleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8BA82A38F5B000CDD17A /* CircleLoader.swift */; };
 		FA9D8BAB2A38F66300CDD17A /* RemoveRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */; };
+		FAFD87072A390368002AD14B /* PixelPeep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD87062A390368002AD14B /* PixelPeep.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		FA9D8BA62A38F53D00CDD17A /* PixelFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelFlip.swift; sourceTree = "<group>"; };
 		FA9D8BA82A38F5B000CDD17A /* CircleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLoader.swift; sourceTree = "<group>"; };
 		FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRed.swift; sourceTree = "<group>"; };
+		FAFD87062A390368002AD14B /* PixelPeep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelPeep.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				FA9D8BA62A38F53D00CDD17A /* PixelFlip.swift */,
 				FA9D8BA82A38F5B000CDD17A /* CircleLoader.swift */,
 				FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */,
+				FAFD87062A390368002AD14B /* PixelPeep.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			files = (
 				FA9D8B9F2A38F32500CDD17A /* Shaders.metal in Sources */,
 				FA9D8BA72A38F53D00CDD17A /* PixelFlip.swift in Sources */,
+				FAFD87072A390368002AD14B /* PixelPeep.swift in Sources */,
 				FA9D8BA12A38F37000CDD17A /* Aqua.swift in Sources */,
 				FA9D8BAB2A38F66300CDD17A /* RemoveRed.swift in Sources */,
 				FA9D8BA32A38F3E000CDD17A /* Gradientify.swift in Sources */,

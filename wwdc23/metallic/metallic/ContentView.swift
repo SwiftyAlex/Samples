@@ -23,6 +23,9 @@ struct ContentView: View {
                 NavigationLink(destination: GradientSubtract()) {
                     Text("Gradient Subtract")
                 }
+                NavigationLink(destination: PixelPeep()) {
+                    Text("Pixel Peep")
+                }
                 NavigationLink(destination: PixelFlip()) {
                     Text("Pixel Flip")
                 }
