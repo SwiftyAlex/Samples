@@ -19,6 +19,7 @@
 		FA9D8BA92A38F5B000CDD17A /* CircleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8BA82A38F5B000CDD17A /* CircleLoader.swift */; };
 		FA9D8BAB2A38F66300CDD17A /* RemoveRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */; };
 		FB55715F2A3A57920011A392 /* ApollonianGasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55715E2A3A57920011A392 /* ApollonianGasket.swift */; };
+		FBD03AC92A3A740E000F3351 /* PartyConcertVisuals2020.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD03AC82A3A740E000F3351 /* PartyConcertVisuals2020.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		FA9D8BA82A38F5B000CDD17A /* CircleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLoader.swift; sourceTree = "<group>"; };
 		FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRed.swift; sourceTree = "<group>"; };
 		FB55715E2A3A57920011A392 /* ApollonianGasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApollonianGasket.swift; sourceTree = "<group>"; };
+		FBD03AC82A3A740E000F3351 /* PartyConcertVisuals2020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyConcertVisuals2020.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				FA9D8BA82A38F5B000CDD17A /* CircleLoader.swift */,
 				FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */,
 				FB55715E2A3A57920011A392 /* ApollonianGasket.swift */,
+				FBD03AC82A3A740E000F3351 /* PartyConcertVisuals2020.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				FA9D8BAB2A38F66300CDD17A /* RemoveRed.swift in Sources */,
 				FA9D8BA32A38F3E000CDD17A /* Gradientify.swift in Sources */,
 				FA9D8B912A38F31400CDD17A /* ContentView.swift in Sources */,
+				FBD03AC92A3A740E000F3351 /* PartyConcertVisuals2020.swift in Sources */,
 				FA9D8B8F2A38F31400CDD17A /* metallicApp.swift in Sources */,
 				FB55715F2A3A57920011A392 /* ApollonianGasket.swift in Sources */,
 				FA9D8BA92A38F5B000CDD17A /* CircleLoader.swift in Sources */,

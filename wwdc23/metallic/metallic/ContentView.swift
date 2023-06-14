@@ -32,6 +32,9 @@ struct ContentView: View {
                 NavigationLink(destination: ApollonianGasket()) {
                     Text("Apollonian Gasket")
                 }
+                NavigationLink(destination: PartyConcertVisuals2020()) {
+                    Text("Party Concert Visuals 2020")
+                }
             }
             .navigationTitle("Shaderland")
         }
