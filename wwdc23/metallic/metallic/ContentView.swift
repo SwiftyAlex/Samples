@@ -29,6 +29,9 @@ struct ContentView: View {
                 NavigationLink(destination: CircleLoader()) {
                     Text("Circle Loader")
                 }
+                NavigationLink(destination: ApollonianGasket()) {
+                    Text("Apollonian Gasket")
+                }
             }
             .navigationTitle("Shaderland")
         }
