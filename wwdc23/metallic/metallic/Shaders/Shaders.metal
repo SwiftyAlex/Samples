@@ -93,6 +93,23 @@ using namespace metal;
     return half4(mix(background, circles, stepCircle));
 }
 
+// MARK: - Pixel Peep
+[[ stitchable ]] half4 pixelPeep(
+    float2 position,
+    SwiftUI::Layer layer
+) {
+    half4 pixelColor = layer.sample(position);
+    half4 lookAheadPixelColor = layer.sample(position.x + 20);
+
+    bool pixelIsRed = pixelColor.x == 1 && pixelColor.y == 0 && pixelColor.z == 0;
+    bool lookAheadIsGreen = lookAheadPixelColor.x == 0 && lookAheadPixelColor.y == 1 && lookAheadPixelColor.z == 0;
+
+    if (pixelIsRed && lookAheadIsGreen) {
+        return half4(0, 0.8, 0.8, 1);
+    }
+
+    return layer.sample(position);
+}
 
 // MARK: - Apollonian Gasket
 
@@ -420,5 +437,4 @@ float3 norm(float3 p, thread float3 *p2, thread float *doodad, thread float *laz
     }
 
     return half4(fragColor.x,fragColor.y,fragColor.z,fragColor.w);
-
 }

@@ -20,6 +20,7 @@
 		FA9D8BAB2A38F66300CDD17A /* RemoveRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */; };
 		FB55715F2A3A57920011A392 /* ApollonianGasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55715E2A3A57920011A392 /* ApollonianGasket.swift */; };
 		FBD03AC92A3A740E000F3351 /* PartyConcertVisuals2020.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD03AC82A3A740E000F3351 /* PartyConcertVisuals2020.swift */; };
+		FAFD87072A390368002AD14B /* PixelPeep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD87062A390368002AD14B /* PixelPeep.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRed.swift; sourceTree = "<group>"; };
 		FB55715E2A3A57920011A392 /* ApollonianGasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApollonianGasket.swift; sourceTree = "<group>"; };
 		FBD03AC82A3A740E000F3351 /* PartyConcertVisuals2020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyConcertVisuals2020.swift; sourceTree = "<group>"; };
+		FAFD87062A390368002AD14B /* PixelPeep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelPeep.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */,
 				FB55715E2A3A57920011A392 /* ApollonianGasket.swift */,
 				FBD03AC82A3A740E000F3351 /* PartyConcertVisuals2020.swift */,
+				FAFD87062A390368002AD14B /* PixelPeep.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			files = (
 				FA9D8B9F2A38F32500CDD17A /* Shaders.metal in Sources */,
 				FA9D8BA72A38F53D00CDD17A /* PixelFlip.swift in Sources */,
+				FAFD87072A390368002AD14B /* PixelPeep.swift in Sources */,
 				FA9D8BA12A38F37000CDD17A /* Aqua.swift in Sources */,
 				FA9D8BAB2A38F66300CDD17A /* RemoveRed.swift in Sources */,
 				FA9D8BA32A38F3E000CDD17A /* Gradientify.swift in Sources */,
