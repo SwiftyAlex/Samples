@@ -18,14 +18,15 @@ struct PartyConcertVisuals2020: View {
                     .partyConcertVisuals2020(
                         seconds: context.date.timeIntervalSince1970 - self.start.timeIntervalSince1970
                     )
-                    .overlay {
-                        VStack {
+                    .overlay(alignment: .bottomLeading) {
+                        VStack(alignment: .leading) {
                             Spacer()
                             Text("@Party Concert Visuals 2020\nShader CC0 1.0 Universal created by blackle\nPorted to DCTL by JiPi and to Metal by nmbr73")
                                 .font(.caption.bold())
                                 .fontDesign(.rounded)
                                 .foregroundStyle(.white.gradient)
                         }
+                        .padding()
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 12))
             }

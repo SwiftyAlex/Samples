@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA549B162A3B01CB00C2FC28 /* CommunityShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FA549B152A3B01CB00C2FC28 /* CommunityShaders.metal */; };
 		FA9D8B8F2A38F31400CDD17A /* metallicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8B8E2A38F31400CDD17A /* metallicApp.swift */; };
 		FA9D8B912A38F31400CDD17A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8B902A38F31400CDD17A /* ContentView.swift */; };
 		FA9D8B932A38F31500CDD17A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA9D8B922A38F31500CDD17A /* Assets.xcassets */; };
@@ -18,12 +19,13 @@
 		FA9D8BA72A38F53D00CDD17A /* PixelFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8BA62A38F53D00CDD17A /* PixelFlip.swift */; };
 		FA9D8BA92A38F5B000CDD17A /* CircleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8BA82A38F5B000CDD17A /* CircleLoader.swift */; };
 		FA9D8BAB2A38F66300CDD17A /* RemoveRed.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */; };
+		FAFD87072A390368002AD14B /* PixelPeep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD87062A390368002AD14B /* PixelPeep.swift */; };
 		FB55715F2A3A57920011A392 /* ApollonianGasket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB55715E2A3A57920011A392 /* ApollonianGasket.swift */; };
 		FBD03AC92A3A740E000F3351 /* PartyConcertVisuals2020.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD03AC82A3A740E000F3351 /* PartyConcertVisuals2020.swift */; };
-		FAFD87072A390368002AD14B /* PixelPeep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD87062A390368002AD14B /* PixelPeep.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA549B152A3B01CB00C2FC28 /* CommunityShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = CommunityShaders.metal; sourceTree = "<group>"; };
 		FA9D8B8B2A38F31400CDD17A /* metallic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = metallic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA9D8B8E2A38F31400CDD17A /* metallicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = metallicApp.swift; sourceTree = "<group>"; };
 		FA9D8B902A38F31400CDD17A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,9 +38,9 @@
 		FA9D8BA62A38F53D00CDD17A /* PixelFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelFlip.swift; sourceTree = "<group>"; };
 		FA9D8BA82A38F5B000CDD17A /* CircleLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLoader.swift; sourceTree = "<group>"; };
 		FA9D8BAA2A38F66300CDD17A /* RemoveRed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRed.swift; sourceTree = "<group>"; };
+		FAFD87062A390368002AD14B /* PixelPeep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelPeep.swift; sourceTree = "<group>"; };
 		FB55715E2A3A57920011A392 /* ApollonianGasket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApollonianGasket.swift; sourceTree = "<group>"; };
 		FBD03AC82A3A740E000F3351 /* PartyConcertVisuals2020.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyConcertVisuals2020.swift; sourceTree = "<group>"; };
-		FAFD87062A390368002AD14B /* PixelPeep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixelPeep.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				FA9D8B9E2A38F32500CDD17A /* Shaders.metal */,
+				FA549B152A3B01CB00C2FC28 /* CommunityShaders.metal */,
 			);
 			path = Shaders;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				FA9D8BA12A38F37000CDD17A /* Aqua.swift in Sources */,
 				FA9D8BAB2A38F66300CDD17A /* RemoveRed.swift in Sources */,
 				FA9D8BA32A38F3E000CDD17A /* Gradientify.swift in Sources */,
+				FA549B162A3B01CB00C2FC28 /* CommunityShaders.metal in Sources */,
 				FA9D8B912A38F31400CDD17A /* ContentView.swift in Sources */,
 				FBD03AC92A3A740E000F3351 /* PartyConcertVisuals2020.swift in Sources */,
 				FA9D8B8F2A38F31400CDD17A /* metallicApp.swift in Sources */,

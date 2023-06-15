@@ -32,14 +32,22 @@ struct ContentView: View {
                 NavigationLink(destination: CircleLoader()) {
                     Text("Circle Loader")
                 }
-                NavigationLink(destination: ApollonianGasket()) {
-                    Text("Apollonian Gasket")
-                }
-                NavigationLink(destination: PartyConcertVisuals2020()) {
-                    Text("Party Concert Visuals 2020")
-                }
+                
+                communityShaders
             }
             .navigationTitle("Shaderland")
+        }
+    }
+
+    var communityShaders: some View {
+        // MARK: - Community Shaders
+        Section("@nmbr73") {
+            NavigationLink(destination: ApollonianGasket()) {
+                Text("Apollonian Gasket")
+            }
+            NavigationLink(destination: PartyConcertVisuals2020()) {
+                Text("Party Concert Visuals 2020")
+            }
         }
     }
 }

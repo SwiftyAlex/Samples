@@ -18,14 +18,15 @@ struct ApollonianGasket: View {
                     .apollonianGasket(
                         seconds: context.date.timeIntervalSince1970 - self.start.timeIntervalSince1970
                     )
-                    .overlay {
-                        VStack {
+                    .overlay(alignment: .bottomLeading) {
+                        VStack(alignment: .leading) {
                             Spacer()
                             Text("Apollian with a twist\nShader CC0 created by mrange\nPorted to Metal by nmbr73")
                                 .font(.caption.bold())
                                 .fontDesign(.rounded)
                                 .foregroundStyle(.white.gradient)
                         }
+                        .padding()
                     }
                     .clipShape(RoundedRectangle(cornerRadius: 12))
             }
