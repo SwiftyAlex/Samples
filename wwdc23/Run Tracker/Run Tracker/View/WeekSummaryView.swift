@@ -11,24 +11,22 @@ import SwiftData
 struct WeekSummaryView: View {
     let runStore: RunStore
 
-    @Query(sort: \.date, order: .reverse, animation: .bouncy)
-    var runs: [Run]
+    static var startOfLastWeek: Double {
+        Date().addingTimeInterval(-604800).timeIntervalSince1970
+    }
 
-    // This query, no matter what the date, will always return nothing.
+    // This query, no matter what the date, if you use `Date` will always return nothing.
     // I've tried a bunch of approaches and can't get it to co-operate, so for now, it just shows all runs.
     // Other simple predicates do work, so this is just strange
-
-//    static var startOfLastWeek: Date {
-//        Date().addingTimeInterval(-604800)
-//    }
-//    @Query(
-//        filter: #Predicate {
-//            $0.date > startOfLastWeek
-//        },
-//        sort: \.date,
-//        animation: .bouncy
-//    )
-//    var runs: [Run]
+    // NOTE: This is confirmed as a bug with Date in predicates, so I've swapped it out to doubles
+    @Query(
+        filter: #Predicate {
+            $0.date > startOfLastWeek
+        },
+        sort: \.date,
+        animation: .bouncy
+    )
+    var runs: [Run]
 
     @State var showSheet: Bool = false
 
@@ -76,7 +74,7 @@ struct WeekSummaryView: View {
         Section("Your runs") {
             ForEach(runs, id: \.id) { run in
                 HStack {
-                    Text(run.date.formatted())
+                    Text(run.actualDate.formatted())
                     Spacer()
                     Text(run.kilometers.formatted())
                 }

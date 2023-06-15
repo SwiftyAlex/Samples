@@ -7,6 +7,17 @@
 
 import Foundation
 import AppIntents
+import Observation
+import AVKit
+import AVFoundation
+
+// This is a cheeky experiment to check if you can update in-app container stuff from inside the widget
+// Its called in `perform` below, and observed on the homepage
+@Observable final class TestingThing {
+    static let shared = TestingThing()
+
+    var testString: String = ":)"
+}
 
 struct RunIntent: LiveActivityIntent, WidgetConfigurationIntent {
     static var title: LocalizedStringResource = "Track your run"
@@ -25,6 +36,7 @@ struct RunIntent: LiveActivityIntent, WidgetConfigurationIntent {
 
     func perform() async throws -> some IntentResult {
         await RunStore().track(kilomereDistance: run.rawValue)
+        TestingThing.shared.testString = "widget!"
         return .result(value: run.rawValue)
     }
 }
