@@ -15,6 +15,7 @@ final class Brew {
     var rating: Int
     var brewDate: Date
 
+    @Relationship(.nullify)
     var brewer: Brewer?
 
     init(

@@ -71,5 +71,5 @@ struct BrewForm: View {
 }
 
 #Preview {
-//BrewForm(brewer: .init(name: "Preview Brewer"))
+    BrewForm(brewer: .init(name: "Preview Brewer"))
 }
